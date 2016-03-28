@@ -57,6 +57,10 @@ class PersonalTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return firstSectionHeader
     }
+    
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+        print(firstSectionHeader?.frame)
+    }
 
 }
 

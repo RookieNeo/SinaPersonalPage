@@ -14,6 +14,7 @@ class PersonPageViewController: UIViewController {
     
     let secondVC = WeiboTableViewController()
     var currentIndex = 1
+    var switchOffset = CGPointZero
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,21 +31,33 @@ class PersonPageViewController: UIViewController {
         
         switchView.afterClickAction = { [unowned self](index:Int) -> Void in
             
+            if index == self.currentIndex {
+                return
+            }
             if index == 1 {
+                
+                if self.secondVC.firstSectionHeader?.frame.origin.y <= 237 {
+                    self.firstVC.tableView.contentOffset = self.secondVC.tableView.contentOffset
+                }
                 self.secondVC.firstSectionHeader = nil
                 self.firstVC.firstSectionHeader = self.switchView
                 self.firstVC.tableView.reloadData()
+            
                 self.view.bringSubviewToFront(self.firstVC.view)
             }
             
             if index == 2 {
-               
+                if self.firstVC.firstSectionHeader?.frame.origin.y <= 237 {
+                    self.switchOffset = self.firstVC.tableView.contentOffset
+                }
                 self.firstVC.firstSectionHeader = nil
                 self.secondVC.firstSectionHeader = self.switchView
                 self.secondVC.tableView.reloadData()
+                self.secondVC.tableView.contentOffset = self.switchOffset
                 self.view.bringSubviewToFront(self.secondVC.view)
                 
             }
+            self.currentIndex = index
     
             
         }// Do any additional setup after loading the view.
