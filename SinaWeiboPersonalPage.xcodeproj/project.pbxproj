@@ -14,6 +14,19 @@
 		4025FB591CA8F0AD0083F598 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4025FB571CA8F0AD0083F598 /* LaunchScreen.storyboard */; };
 		4025FB641CA8F0AD0083F598 /* SinaWeiboPersonalPageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4025FB631CA8F0AD0083F598 /* SinaWeiboPersonalPageTests.swift */; };
 		4025FB6F1CA8F0AE0083F598 /* SinaWeiboPersonalPageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4025FB6E1CA8F0AE0083F598 /* SinaWeiboPersonalPageUITests.swift */; };
+		4025FB7D1CA8F1290083F598 /* PersonPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4025FB7C1CA8F1290083F598 /* PersonPageViewController.swift */; };
+		4025FB801CA8F8850083F598 /* UIViewController+ChildExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4025FB7F1CA8F8850083F598 /* UIViewController+ChildExtension.swift */; };
+		4025FB841CA8FC960083F598 /* PersonalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4025FB831CA8FC960083F598 /* PersonalTableViewController.swift */; };
+		4025FB861CA8FE410083F598 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4025FB851CA8FE410083F598 /* HeaderView.swift */; };
+		4025FB8A1CA8FED20083F598 /* wuyanzu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4025FB891CA8FED20083F598 /* wuyanzu.jpg */; };
+		4025FB8D1CA8FF2B0083F598 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4025FB8C1CA8FF2B0083F598 /* AppConstants.swift */; };
+		4025FB8F1CA8FFFB0083F598 /* HotWeiboTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4025FB8E1CA8FFFB0083F598 /* HotWeiboTableViewCell.swift */; };
+		4025FB911CA9000F0083F598 /* HotWeiboTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4025FB901CA9000F0083F598 /* HotWeiboTableViewCell.xib */; };
+		4025FB951CA901250083F598 /* ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4025FB941CA901250083F598 /* ReuseIdentifierProtocol.swift */; };
+		4025FB971CA907A60083F598 /* SwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4025FB961CA907A60083F598 /* SwitchView.swift */; };
+		4025FB991CA90AAA0083F598 /* WeiboTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4025FB981CA90AAA0083F598 /* WeiboTableViewController.swift */; };
+		4025FB9B1CA90AEA0083F598 /* NormalWeiboTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4025FB9A1CA90AEA0083F598 /* NormalWeiboTableViewCell.swift */; };
+		4025FB9D1CA90AFC0083F598 /* NormalWeiboTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4025FB9C1CA90AFC0083F598 /* NormalWeiboTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +60,19 @@
 		4025FB6A1CA8F0AE0083F598 /* SinaWeiboPersonalPageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SinaWeiboPersonalPageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4025FB6E1CA8F0AE0083F598 /* SinaWeiboPersonalPageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinaWeiboPersonalPageUITests.swift; sourceTree = "<group>"; };
 		4025FB701CA8F0AE0083F598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4025FB7C1CA8F1290083F598 /* PersonPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonPageViewController.swift; sourceTree = "<group>"; };
+		4025FB7F1CA8F8850083F598 /* UIViewController+ChildExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ChildExtension.swift"; sourceTree = "<group>"; };
+		4025FB831CA8FC960083F598 /* PersonalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalTableViewController.swift; sourceTree = "<group>"; };
+		4025FB851CA8FE410083F598 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		4025FB891CA8FED20083F598 /* wuyanzu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wuyanzu.jpg; sourceTree = "<group>"; };
+		4025FB8C1CA8FF2B0083F598 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		4025FB8E1CA8FFFB0083F598 /* HotWeiboTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotWeiboTableViewCell.swift; sourceTree = "<group>"; };
+		4025FB901CA9000F0083F598 /* HotWeiboTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HotWeiboTableViewCell.xib; sourceTree = "<group>"; };
+		4025FB941CA901250083F598 /* ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReuseIdentifierProtocol.swift; sourceTree = "<group>"; };
+		4025FB961CA907A60083F598 /* SwitchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchView.swift; sourceTree = "<group>"; };
+		4025FB981CA90AAA0083F598 /* WeiboTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeiboTableViewController.swift; sourceTree = "<group>"; };
+		4025FB9A1CA90AEA0083F598 /* NormalWeiboTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalWeiboTableViewCell.swift; sourceTree = "<group>"; };
+		4025FB9C1CA90AFC0083F598 /* NormalWeiboTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NormalWeiboTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +123,13 @@
 		4025FB4D1CA8F0AD0083F598 /* SinaWeiboPersonalPage */ = {
 			isa = PBXGroup;
 			children = (
+				4025FB931CA901160083F598 /* Protocol */,
+				4025FB921CA900D90083F598 /* ViewController */,
+				4025FB8B1CA8FF210083F598 /* Util */,
+				4025FB881CA8FEC60083F598 /* Resource */,
+				4025FB871CA8FE440083F598 /* View */,
+				4025FB7E1CA8F8730083F598 /* Category */,
 				4025FB4E1CA8F0AD0083F598 /* AppDelegate.swift */,
-				4025FB501CA8F0AD0083F598 /* ViewController.swift */,
 				4025FB521CA8F0AD0083F598 /* Main.storyboard */,
 				4025FB551CA8F0AD0083F598 /* Assets.xcassets */,
 				4025FB571CA8F0AD0083F598 /* LaunchScreen.storyboard */,
@@ -123,6 +154,62 @@
 				4025FB701CA8F0AE0083F598 /* Info.plist */,
 			);
 			path = SinaWeiboPersonalPageUITests;
+			sourceTree = "<group>";
+		};
+		4025FB7E1CA8F8730083F598 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				4025FB7F1CA8F8850083F598 /* UIViewController+ChildExtension.swift */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		4025FB871CA8FE440083F598 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4025FB851CA8FE410083F598 /* HeaderView.swift */,
+				4025FB8E1CA8FFFB0083F598 /* HotWeiboTableViewCell.swift */,
+				4025FB901CA9000F0083F598 /* HotWeiboTableViewCell.xib */,
+				4025FB9A1CA90AEA0083F598 /* NormalWeiboTableViewCell.swift */,
+				4025FB9C1CA90AFC0083F598 /* NormalWeiboTableViewCell.xib */,
+				4025FB961CA907A60083F598 /* SwitchView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4025FB881CA8FEC60083F598 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				4025FB891CA8FED20083F598 /* wuyanzu.jpg */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		4025FB8B1CA8FF210083F598 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				4025FB8C1CA8FF2B0083F598 /* AppConstants.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		4025FB921CA900D90083F598 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4025FB501CA8F0AD0083F598 /* ViewController.swift */,
+				4025FB7C1CA8F1290083F598 /* PersonPageViewController.swift */,
+				4025FB831CA8FC960083F598 /* PersonalTableViewController.swift */,
+				4025FB981CA90AAA0083F598 /* WeiboTableViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		4025FB931CA901160083F598 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				4025FB941CA901250083F598 /* ReuseIdentifierProtocol.swift */,
+			);
+			name = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,7 +317,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4025FB591CA8F0AD0083F598 /* LaunchScreen.storyboard in Resources */,
+				4025FB9D1CA90AFC0083F598 /* NormalWeiboTableViewCell.xib in Resources */,
+				4025FB8A1CA8FED20083F598 /* wuyanzu.jpg in Resources */,
 				4025FB561CA8F0AD0083F598 /* Assets.xcassets in Resources */,
+				4025FB911CA9000F0083F598 /* HotWeiboTableViewCell.xib in Resources */,
 				4025FB541CA8F0AD0083F598 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,8 +346,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4025FB841CA8FC960083F598 /* PersonalTableViewController.swift in Sources */,
+				4025FB861CA8FE410083F598 /* HeaderView.swift in Sources */,
+				4025FB8F1CA8FFFB0083F598 /* HotWeiboTableViewCell.swift in Sources */,
+				4025FB801CA8F8850083F598 /* UIViewController+ChildExtension.swift in Sources */,
 				4025FB511CA8F0AD0083F598 /* ViewController.swift in Sources */,
+				4025FB8D1CA8FF2B0083F598 /* AppConstants.swift in Sources */,
 				4025FB4F1CA8F0AD0083F598 /* AppDelegate.swift in Sources */,
+				4025FB7D1CA8F1290083F598 /* PersonPageViewController.swift in Sources */,
+				4025FB971CA907A60083F598 /* SwitchView.swift in Sources */,
+				4025FB951CA901250083F598 /* ReuseIdentifierProtocol.swift in Sources */,
+				4025FB991CA90AAA0083F598 /* WeiboTableViewController.swift in Sources */,
+				4025FB9B1CA90AEA0083F598 /* NormalWeiboTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
