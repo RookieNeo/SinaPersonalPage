@@ -16,6 +16,7 @@ class PersonPageViewController: UIViewController,UIScrollViewDelegate,TableViewM
     let scrollView = UIScrollView()
     let subScrollView = UIScrollView()
     var headView :  HeadView!
+    var currentIndex : CGFloat = -173
     override func viewDidLoad() {
         super.viewDidLoad()
          self.navigationController?.navigationBar.subviews[0].alpha = 0
@@ -28,53 +29,73 @@ class PersonPageViewController: UIViewController,UIScrollViewDelegate,TableViewM
             
            self.subScrollView.contentOffset = CGPointMake(kScreenWidth * CGFloat(index - 1), 0)
             }
-        scrollView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight)
-        scrollView.contentSize = CGSizeMake(kScreenWidth, kScreenHeight + kHeaderViewHeight)
-        scrollView.delegate = self
-        scrollView.scrollEnabled = false
-        self.view.addSubview(scrollView)
-        headView = NSBundle.mainBundle().loadNibNamed("HeadView", owner: self, options: nil).last as! HeadView
-        headView.frame = CGRectMake(0, 0, kScreenWidth, kHeaderViewHeight)
-        scrollView.addSubview(headView)
+//        scrollView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight)
+//        scrollView.contentSize = CGSizeMake(kScreenWidth, kScreenHeight + kHeaderViewHeight)
+//        scrollView.delegate = self
+//        scrollView.scrollEnabled = false
+//        self.view.addSubview(scrollView)
         
-        subScrollView.frame = CGRectMake(0, kHeaderViewHeight, kScreenWidth, kScreenHeight)
+        subScrollView.frame = CGRectMake(0, 64, kScreenWidth, kScreenHeight - 64)
         subScrollView.contentSize = CGSizeMake(kScreenWidth * 4, 0)
         subScrollView.pagingEnabled = true
-        scrollView.addSubview(subScrollView)
+        subScrollView.delegate = self
+        self.view.addSubview(subScrollView)
         
-        firstVC.view.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight )
+        firstVC.view.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight - 64)
         firstVC.delegate = self
         subScrollView.addSubview(firstVC.view)
         self.navigationController?.addChildViewController(firstVC)
         
-        secondVC.view.frame = CGRectMake(kScreenWidth,0, kScreenWidth, kScreenHeight)
+        secondVC.view.frame = CGRectMake(kScreenWidth, 0, kScreenWidth, kScreenHeight - 64)
         secondVC.delegate = self
         subScrollView.addSubview(secondVC.view)
         self.navigationController?.addChildViewController(secondVC)
+        
+        headView = NSBundle.mainBundle().loadNibNamed("HeadView", owner: self, options: nil).last as! HeadView
+        headView.frame = CGRectMake(0, 0, kScreenWidth, kHeaderViewHeight)
+        self.view.addSubview(headView)
+        
         self.view.addSubview(switchView)
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
     }
-    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        let tableViewArray  = [firstVC.tableView,secondVC.tableView]
+        let index = Int(scrollView.contentOffset.x / kScreenWidth)
+       // tableViewArray[index].contentOffset.y = currentIndex
+        switch index{
+        case 0 :
+             tableViewArray[0].contentOffset.y = currentIndex
+            tableViewArray[1].contentOffset.y = currentIndex
+        case 1 :
+             tableViewArray[0].contentOffset.y = currentIndex
+             tableViewArray[0].contentOffset.y = currentIndex
+        default :
+            break
+        }
+    }
     func TableViewMove(y:CGFloat){
         print(y)
-        if y <= 0{
-            headView.frame.size.height = kHeaderViewHeight - y
-            switchView.frame.origin.y = kHeaderViewHeight - 44 - y
-            scrollView.contentOffset = CGPointMake(0, 0)
+        if y <= -173{
+            currentIndex = -173
+            headView.frame.size.height = kHeaderViewHeight - (173 + y)
+            switchView.frame.origin.y = kHeaderViewHeight - (173 + 44 + y)
             self.navigationController?.navigationBar.subviews[0].alpha = 0
-        }else if y>0 && y <= kHeaderViewHeight{
-            scrollView.contentOffset = CGPointMake(0, y)
+        }else if y > -173 && y <= 0{
+            currentIndex = y
+            headView.frame.origin.y = -kHeaderViewHeight - y + 64
             self.navigationController?.navigationBar.subviews[0].alpha = y / kHeaderViewHeight
-            if y <= kHeaderViewHeight - 44 - 64{
-                switchView.frame.origin.y = kHeaderViewHeight - 44 - y
+            if y <= -43{
+                switchView.frame.origin.y = kHeaderViewHeight - 44 - (173 + y)
             }else{
                 switchView.frame.origin.y = 64
             }
-        }else if y > kHeaderViewHeight{
-            scrollView.contentOffset = CGPointMake(0, kHeaderViewHeight)
+            
+        }else if y > 0{
+            currentIndex = 0
+            headView.frame.origin.y = -kHeaderViewHeight + 64
             switchView.frame.origin.y = 64
             self.navigationController?.navigationBar.subviews[0].alpha = 1
         }

@@ -17,8 +17,12 @@ class PersonalTableViewController: UITableViewController {
         self.automaticallyAdjustsScrollViewInsets = false
         self.tableView.registerNib(UINib(nibName: "HotWeiboTableViewCell", bundle: nil), forCellReuseIdentifier:HotWeiboTableViewCell.reuseIdentifier)
         self.tableView.backgroundColor = UIColor.clearColor()
+        self.tableView.contentInset = UIEdgeInsetsMake(kHeaderViewHeight - 64, 0, 0, 0)
     }
-
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+    
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -30,7 +34,7 @@ class PersonalTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return 50
     }
     override func scrollViewDidScroll(scrollView: UIScrollView) {
         delegate?.TableViewMove(scrollView.contentOffset.y)
