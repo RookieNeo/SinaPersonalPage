@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		18F25AD21CAB783400E52008 /* HeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F25AD11CAB783400E52008 /* HeadView.swift */; };
 		18F25AD41CAB784400E52008 /* HeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F25AD31CAB784400E52008 /* HeadView.xib */; };
+		18F25AD61CABE67800E52008 /* PhotoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F25AD51CABE67800E52008 /* PhotoTableViewController.swift */; };
 		4025FB4F1CA8F0AD0083F598 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4025FB4E1CA8F0AD0083F598 /* AppDelegate.swift */; };
 		4025FB511CA8F0AD0083F598 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4025FB501CA8F0AD0083F598 /* ViewController.swift */; };
 		4025FB541CA8F0AD0083F598 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4025FB521CA8F0AD0083F598 /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		18F25AD11CAB783400E52008 /* HeadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadView.swift; sourceTree = "<group>"; };
 		18F25AD31CAB784400E52008 /* HeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeadView.xib; sourceTree = "<group>"; };
+		18F25AD51CABE67800E52008 /* PhotoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTableViewController.swift; sourceTree = "<group>"; };
 		4025FB4B1CA8F0AD0083F598 /* SinaWeiboPersonalPage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinaWeiboPersonalPage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4025FB4E1CA8F0AD0083F598 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4025FB501CA8F0AD0083F598 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				4025FB7C1CA8F1290083F598 /* PersonPageViewController.swift */,
 				4025FB831CA8FC960083F598 /* PersonalTableViewController.swift */,
 				4025FB981CA90AAA0083F598 /* WeiboTableViewController.swift */,
+				18F25AD51CABE67800E52008 /* PhotoTableViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				4025FB951CA901250083F598 /* ReuseIdentifierProtocol.swift in Sources */,
 				4025FB991CA90AAA0083F598 /* WeiboTableViewController.swift in Sources */,
 				18F25AD21CAB783400E52008 /* HeadView.swift in Sources */,
+				18F25AD61CABE67800E52008 /* PhotoTableViewController.swift in Sources */,
 				4025FB9B1CA90AEA0083F598 /* NormalWeiboTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

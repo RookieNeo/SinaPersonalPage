@@ -13,6 +13,7 @@ class PersonPageViewController: UIViewController,UIScrollViewDelegate,TableViewM
     let firstVC = PersonalTableViewController()
     let switchView = SwitchView(frame: CGRect(x: 0, y: kHeaderViewHeight - 44, width: kScreenWidth, height: 44))
     let secondVC = WeiboTableViewController()
+    let thirdVC = PhotoTableViewController()
     let scrollView = UIScrollView()
     let subScrollView = UIScrollView()
     var headView :  HeadView!
@@ -28,13 +29,7 @@ class PersonPageViewController: UIViewController,UIScrollViewDelegate,TableViewM
         switchView.afterClickAction =  { [unowned self](index:Int) -> Void in
             
            self.subScrollView.contentOffset = CGPointMake(kScreenWidth * CGFloat(index - 1), 0)
-            }
-//        scrollView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight)
-//        scrollView.contentSize = CGSizeMake(kScreenWidth, kScreenHeight + kHeaderViewHeight)
-//        scrollView.delegate = self
-//        scrollView.scrollEnabled = false
-//        self.view.addSubview(scrollView)
-        
+        }
         subScrollView.frame = CGRectMake(0, 64, kScreenWidth, kScreenHeight - 64)
         subScrollView.contentSize = CGSizeMake(kScreenWidth * 4, 0)
         subScrollView.pagingEnabled = true
@@ -52,6 +47,7 @@ class PersonPageViewController: UIViewController,UIScrollViewDelegate,TableViewM
         self.navigationController?.addChildViewController(secondVC)
         
         headView = NSBundle.mainBundle().loadNibNamed("HeadView", owner: self, options: nil).last as! HeadView
+        headView.clipsToBounds = true
         headView.frame = CGRectMake(0, 0, kScreenWidth, kHeaderViewHeight)
         self.view.addSubview(headView)
         
@@ -71,7 +67,7 @@ class PersonPageViewController: UIViewController,UIScrollViewDelegate,TableViewM
             tableViewArray[1].contentOffset.y = currentIndex
         case 1 :
              tableViewArray[0].contentOffset.y = currentIndex
-             tableViewArray[0].contentOffset.y = currentIndex
+             tableViewArray[1].contentOffset.y = currentIndex
         default :
             break
         }
@@ -85,9 +81,10 @@ class PersonPageViewController: UIViewController,UIScrollViewDelegate,TableViewM
             self.navigationController?.navigationBar.subviews[0].alpha = 0
         }else if y > -173 && y <= 0{
             currentIndex = y
+            headView.frame.size.height = kHeaderViewHeight
             headView.frame.origin.y = -kHeaderViewHeight - y + 64
-            self.navigationController?.navigationBar.subviews[0].alpha = y / kHeaderViewHeight
-            if y <= -43{
+            self.navigationController?.navigationBar.subviews[0].alpha = (173 + y) / 173
+            if y <= -44{
                 switchView.frame.origin.y = kHeaderViewHeight - 44 - (173 + y)
             }else{
                 switchView.frame.origin.y = 64
@@ -95,6 +92,7 @@ class PersonPageViewController: UIViewController,UIScrollViewDelegate,TableViewM
             
         }else if y > 0{
             currentIndex = 0
+            headView.frame.size.height = kHeaderViewHeight
             headView.frame.origin.y = -kHeaderViewHeight + 64
             switchView.frame.origin.y = 64
             self.navigationController?.navigationBar.subviews[0].alpha = 1
