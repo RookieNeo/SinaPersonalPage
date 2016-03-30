@@ -70,6 +70,8 @@ class PersonPageViewController: UIViewController,UIScrollViewDelegate,TableViewM
             self.navigationController?.navigationBar.subviews[0].alpha = y / kHeaderViewHeight
             if y <= kHeaderViewHeight - 44 - 64{
                 switchView.frame.origin.y = kHeaderViewHeight - 44 - y
+            }else{
+                switchView.frame.origin.y = 64
             }
         }else if y > kHeaderViewHeight{
             scrollView.contentOffset = CGPointMake(0, kHeaderViewHeight)
