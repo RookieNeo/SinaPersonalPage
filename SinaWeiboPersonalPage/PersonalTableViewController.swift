@@ -10,14 +10,13 @@ import UIKit
 
 class PersonalTableViewController: UITableViewController {
     
-    let headerView = HeaderView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: kHeaderViewHeight))
-    var firstSectionHeader:UIView?
+    var delegate :TableViewMoveProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.tableHeaderView = headerView
+        self.automaticallyAdjustsScrollViewInsets = false
         self.tableView.registerNib(UINib(nibName: "HotWeiboTableViewCell", bundle: nil), forCellReuseIdentifier:HotWeiboTableViewCell.reuseIdentifier)
-     
+        self.tableView.backgroundColor = UIColor.clearColor()
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,16 +26,15 @@ class PersonalTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
+   
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 100
+        return 5
     }
-
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+        delegate?.TableViewMove(scrollView.contentOffset.y)
+    }
   
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(HotWeiboTableViewCell.reuseIdentifier) as! HotWeiboTableViewCell
@@ -50,17 +48,7 @@ class PersonalTableViewController: UITableViewController {
     }
    
 
-    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 44
-    }
-    
-    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return firstSectionHeader
-    }
-    
-    override func scrollViewDidScroll(scrollView: UIScrollView) {
-        print(firstSectionHeader?.frame)
-    }
+   
 
 }
 

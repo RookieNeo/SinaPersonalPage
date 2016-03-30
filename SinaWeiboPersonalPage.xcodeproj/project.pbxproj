@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18F25AD21CAB783400E52008 /* HeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F25AD11CAB783400E52008 /* HeadView.swift */; };
+		18F25AD41CAB784400E52008 /* HeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F25AD31CAB784400E52008 /* HeadView.xib */; };
 		4025FB4F1CA8F0AD0083F598 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4025FB4E1CA8F0AD0083F598 /* AppDelegate.swift */; };
 		4025FB511CA8F0AD0083F598 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4025FB501CA8F0AD0083F598 /* ViewController.swift */; };
 		4025FB541CA8F0AD0083F598 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4025FB521CA8F0AD0083F598 /* Main.storyboard */; };
@@ -17,7 +19,6 @@
 		4025FB7D1CA8F1290083F598 /* PersonPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4025FB7C1CA8F1290083F598 /* PersonPageViewController.swift */; };
 		4025FB801CA8F8850083F598 /* UIViewController+ChildExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4025FB7F1CA8F8850083F598 /* UIViewController+ChildExtension.swift */; };
 		4025FB841CA8FC960083F598 /* PersonalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4025FB831CA8FC960083F598 /* PersonalTableViewController.swift */; };
-		4025FB861CA8FE410083F598 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4025FB851CA8FE410083F598 /* HeaderView.swift */; };
 		4025FB8A1CA8FED20083F598 /* wuyanzu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4025FB891CA8FED20083F598 /* wuyanzu.jpg */; };
 		4025FB8D1CA8FF2B0083F598 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4025FB8C1CA8FF2B0083F598 /* AppConstants.swift */; };
 		4025FB8F1CA8FFFB0083F598 /* HotWeiboTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4025FB8E1CA8FFFB0083F598 /* HotWeiboTableViewCell.swift */; };
@@ -47,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18F25AD11CAB783400E52008 /* HeadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadView.swift; sourceTree = "<group>"; };
+		18F25AD31CAB784400E52008 /* HeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeadView.xib; sourceTree = "<group>"; };
 		4025FB4B1CA8F0AD0083F598 /* SinaWeiboPersonalPage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinaWeiboPersonalPage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4025FB4E1CA8F0AD0083F598 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4025FB501CA8F0AD0083F598 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,7 +66,6 @@
 		4025FB7C1CA8F1290083F598 /* PersonPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonPageViewController.swift; sourceTree = "<group>"; };
 		4025FB7F1CA8F8850083F598 /* UIViewController+ChildExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ChildExtension.swift"; sourceTree = "<group>"; };
 		4025FB831CA8FC960083F598 /* PersonalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalTableViewController.swift; sourceTree = "<group>"; };
-		4025FB851CA8FE410083F598 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		4025FB891CA8FED20083F598 /* wuyanzu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wuyanzu.jpg; sourceTree = "<group>"; };
 		4025FB8C1CA8FF2B0083F598 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		4025FB8E1CA8FFFB0083F598 /* HotWeiboTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotWeiboTableViewCell.swift; sourceTree = "<group>"; };
@@ -167,12 +169,13 @@
 		4025FB871CA8FE440083F598 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4025FB851CA8FE410083F598 /* HeaderView.swift */,
+				18F25AD11CAB783400E52008 /* HeadView.swift */,
 				4025FB8E1CA8FFFB0083F598 /* HotWeiboTableViewCell.swift */,
 				4025FB901CA9000F0083F598 /* HotWeiboTableViewCell.xib */,
 				4025FB9A1CA90AEA0083F598 /* NormalWeiboTableViewCell.swift */,
 				4025FB9C1CA90AFC0083F598 /* NormalWeiboTableViewCell.xib */,
 				4025FB961CA907A60083F598 /* SwitchView.swift */,
+				18F25AD31CAB784400E52008 /* HeadView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			files = (
 				4025FB591CA8F0AD0083F598 /* LaunchScreen.storyboard in Resources */,
 				4025FB9D1CA90AFC0083F598 /* NormalWeiboTableViewCell.xib in Resources */,
+				18F25AD41CAB784400E52008 /* HeadView.xib in Resources */,
 				4025FB8A1CA8FED20083F598 /* wuyanzu.jpg in Resources */,
 				4025FB561CA8F0AD0083F598 /* Assets.xcassets in Resources */,
 				4025FB911CA9000F0083F598 /* HotWeiboTableViewCell.xib in Resources */,
@@ -347,7 +351,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4025FB841CA8FC960083F598 /* PersonalTableViewController.swift in Sources */,
-				4025FB861CA8FE410083F598 /* HeaderView.swift in Sources */,
 				4025FB8F1CA8FFFB0083F598 /* HotWeiboTableViewCell.swift in Sources */,
 				4025FB801CA8F8850083F598 /* UIViewController+ChildExtension.swift in Sources */,
 				4025FB511CA8F0AD0083F598 /* ViewController.swift in Sources */,
@@ -357,6 +360,7 @@
 				4025FB971CA907A60083F598 /* SwitchView.swift in Sources */,
 				4025FB951CA901250083F598 /* ReuseIdentifierProtocol.swift in Sources */,
 				4025FB991CA90AAA0083F598 /* WeiboTableViewController.swift in Sources */,
+				18F25AD21CAB783400E52008 /* HeadView.swift in Sources */,
 				4025FB9B1CA90AEA0083F598 /* NormalWeiboTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

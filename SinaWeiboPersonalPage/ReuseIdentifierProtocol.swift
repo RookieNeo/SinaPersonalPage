@@ -13,6 +13,11 @@ public protocol ReuseIdentifierProtocol: class {
     static var reuseIdentifier: String { get }
 }
 
+protocol TableViewMoveProtocol
+{
+    func TableViewMove(y:CGFloat)
+}
+
 extension ReuseIdentifierProtocol {
     static var reuseIdentifier : String {
         return String(Self)

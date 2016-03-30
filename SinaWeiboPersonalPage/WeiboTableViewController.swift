@@ -9,17 +9,15 @@
 import UIKit
 
 class WeiboTableViewController: UITableViewController {
-
-    let headerView = HeaderView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: kHeaderViewHeight))
-    var firstSectionHeader:UIView?
+    
+    var delegate :TableViewMoveProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.tableHeaderView = headerView
-        self.tableView.registerNib(UINib(nibName: "NormalWeiboTableViewCell", bundle: nil), forCellReuseIdentifier:NormalWeiboTableViewCell.reuseIdentifier)
-        
+        self.automaticallyAdjustsScrollViewInsets = false
+         self.tableView.registerNib(UINib(nibName: "NormalWeiboTableViewCell", bundle: nil), forCellReuseIdentifier:NormalWeiboTableViewCell.reuseIdentifier)
+        self.tableView.backgroundColor = UIColor.clearColor()
     }
-
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -28,19 +26,17 @@ class WeiboTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
+    
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 100
+        return 20
+    }
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+        delegate?.TableViewMove(scrollView.contentOffset.y)
     }
     
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
-    {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(NormalWeiboTableViewCell.reuseIdentifier) as! NormalWeiboTableViewCell
         
         
@@ -48,16 +44,11 @@ class WeiboTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 50
+        return 100
     }
     
     
-    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 44
-    }
     
-    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return firstSectionHeader
-    }
-
+    
 }
+
